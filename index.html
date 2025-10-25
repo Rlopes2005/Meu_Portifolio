@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="light">
+<html lang="pt" data-theme="light">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale="1" />
   <title>Samuel — Portfólio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,18 +14,24 @@
     <header>
       <div class="brand">SAMUEL</div>
       <nav>
-        <a class="btn-pixel ghost" href="#projetos">Projetos</a>
-        <a class="btn-pixel ghost" href="#sobre">Sobre</a>
-        <a class="btn-pixel ghost" href="#contato">Contato</a>
+        <a class="btn-pixel ghost" href="#projetos" data-i18n-key="nav-projects">Projetos</a>
+        <a class="btn-pixel ghost" href="#sobre" data-i18n-key="nav-about">Sobre</a>
+        <a class="btn-pixel ghost" href="#contato" data-i18n-key="nav-contact">Contato</a>
       </nav>
-      <button id="theme-toggle" class="btn-pixel secondary" aria-label="Alternar tema">🌙</button>
+      <div class="header-controls">
+        <div class="lang-switcher">
+          <button id="lang-pt" class="lang-btn active" aria-label="Mudar para Português">PT</button>
+          <button id="lang-en" class="lang-btn" aria-label="Mudar para Inglês">EN</button>
+        </div>
+        <button id="theme-toggle" class="btn-pixel secondary" aria-label="Alternar tema">🌙</button>
+      </div>
     </header>
 
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-left">
-          <h1 class="hero-title">Samuel.  Programador Full-Stack.</h1>
-          <p class="hero-sub">
+          <h1 class="hero-title" data-i18n-key="hero-title">Samuel. Programador Full-Stack.</h1>
+          <p class="hero-sub" data-i18n-key="hero-sub">
             Apaixonado por criar soluções digitais simples e eficientes que conectam pessoas e ideias, sempre buscando mais conecimento e inovação.
           </p>
 
@@ -35,103 +41,123 @@
           </div>
 
           <div class="hero-actions">
-            <a class="btn-pixel" href="#projetos">Ver projetos</a>
-            <a class="btn-pixel secondary" href="#contato">Falar comigo</a>
+            <a class="btn-pixel" href="#projetos" data-i18n-key="hero-btn-projects">Ver projetos</a>
+            <a class="btn-pixel secondary" href="#contato" data-i18n-key="hero-btn-contact">Falar comigo</a>
+            
+            <div class="cv-dropdown-container">
+              <button id="cv-dropdown-btn" class="btn-pixel" data-i18n-key="hero-btn-cv">📄 Curriculo</button>
+              <div id="cv-dropdown-menu" class="cv-dropdown-menu">
+                <a href="Currículo PDF - Samuel Lopes PT.pdf" target="_blank" rel="noopener" data-i18n-key="cv-pt">Português (PT)</a>
+                <a href="Resume PDF - Samuel Lopes EN.pdf" target="_blank" rel="noopener" data-i18n-key="cv-en">Inglês (EN)</a>
+              </div>
+            </div>
+            
           </div>
         </div>
 
         <div class="hero-blob">
-  <picture>
-    <!-- Aqui você coloca o nome exato do seu arquivo -->
-    <img src="foto-samuel.jpeg" 
-         alt="Foto de Samuel" 
-         class="hero-image pixel-toggle" 
-         loading="lazy" 
-         decoding="async">
-  </picture>
-</div>
-
+          <picture>
+            <img src="imagem/foto-samuel.jpeg" 
+                 alt="Foto de Samuel" 
+                 class="hero-image pixel-toggle" 
+                 loading="lazy" 
+                 decoding="async">
+          </picture>
+        </div>
       </div>
     </section>
 
     <section id="projetos">
-      <h3 class="section-title">Projetos</h3>
+      <h3 class="section-title" data-i18n-key="projects-title">Projetos</h3>
       <div class="projects-filters">
-        <button class="btn-pixel ghost filter-btn active" data-filter="all">Todos</button>
-        <button class="btn-pixel ghost filter-btn" data-filter="ui">UI/Design</button>
-        <button class="btn-pixel ghost filter-btn" data-filter="web">Web</button>
-        <button class="btn-pixel ghost filter-btn" data-filter="brand">Branding</button>
+        <button class="btn-pixel ghost filter-btn active" data-filter="all" data-i18n-key="filter-all">Todos</button>
+        <button class="btn-pixel ghost filter-btn" data-filter="web" data-i18n-key="filter-web">Web</button>
+        <button class="btn-pixel ghost filter-btn" data-filter="delivery" data-i18n-key="filter-delivery">Delivery</button>
+        <button class="btn-pixel ghost filter-btn" data-filter="e-commerce" data-i18n-key="filter-ecommerce">E-commerce</button>
       </div>
 
       <div class="projects-grid">
-        <article class="project-card" data-tags="web">
-  <div class="project-thumb"></div>
-  <div class="project-body">
-    <h4 class="project-title">FreteFast</h4>
-    <p class="project-desc text-muted">Site desenvolvido para uma feira com foco em delivery rápido e eficiente.</p>
-    <div class="project-actions">
-      <a class="btn-pixel" href="https://github.com/Rlopes2005/Fretefast" data-project="fretefast">Ver detalhes</a>
-      <a class="btn-pixel secondary" href="https://fretefast-vkyf.vercel.app/" target="_blank" rel="noopener">Visitar</a>
-    </div>
-  </div>
-</article>
+        <article class="project-card" data-tags="web delivery">
+          <div class="project-thumb">
+            <img src="imagem/fera.png" alt="Capa do projeto FreteFast">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title" data-i18n-key="project-fretefast-title">FreteFast</h4>
+            <p class="project-desc text-muted" data-i18n-key="project-fretefast-desc">Site desenvolvido para uma feira com foco em delivery rápido e eficiente.</p>
+            <div class="project-actions">
+              <button class="btn-pixel" data-project="fretefast" data-i18n-key="btn-details">Ver detalhes</button>
+              <a class="btn-pixel secondary" href="https://fretefast-vkyf.vercel.app/" target="_blank" rel="noopener" data-i18n-key="btn-visit">Visitar</a>
+            </div>
+          </div>
+        </article>
 
-<article class="project-card" data-tags="web brand">
-  <div class="project-thumb"></div>
-  <div class="project-body">
-    <h4 class="project-title">Site Comercial Engenharia</h4>
-    <p class="project-desc text-muted">Plataforma institucional para apresentar os projetos e serviços de uma empresa de engenharia.</p>
-    <div class="project-actions">
-      <a class="btn-pixel" href="#" data-project="site-comercial-engenharia">Ver detalhes</a>
-      <a class="btn-pixel secondary" href="#" target="_blank" rel="noopener">Visitar</a>
-    </div>
-  </div>
-</article>
+        <article class="project-card" data-tags="web delivery">
+          <div class="project-thumb">
+            <img src="imagem/dicam.png" alt="Capa do projeto Delivery Pizzaria">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title" data-i18n-key="project-pizzaria-title">Delivery Pizzaria</h4>
+            <p class="project-desc text-muted" data-i18n-key="project-pizzaria-desc">Plataforma de pedidos online para uma pizzaria, com foco na experiência do usuário e design responsivo.</p>
+            <div class="project-actions">
+              <button class="btn-pixel" data-project="pizzaria" data-i18n-key="btn-details">Ver detalhes</button>
+              <a class="btn-pixel secondary" href="https://dicampo.infinityfreeapp.com/" target="_blank" rel="noopener" data-i18n-key="btn-visit">Visitar</a>
+            </div>
+          </div>
+        </article>
 
-<article class="project-card" data-tags="web ui">
-  <div class="project-thumb"></div>
-  <div class="project-body">
-    <h4 class="project-title">Farmácia Inteligente</h4>
-    <p class="project-desc text-muted">E-commerce farmacêutico com assistente de IA para recomendações e atendimento personalizado.</p>
-    <div class="project-actions">
-      <a class="btn-pixel" href="#" data-project="farmacia-inteligente">Ver detalhes</a>
-      <a class="btn-pixel secondary" href="#" target="_blank" rel="noopener">Visitar</a>
-    </div>
-  </div>
+        <article class="project-card" data-tags="web e-commerce">
+          <div class="project-thumb">
+            <img src="imagem/farma.png" alt="Capa do projeto Farmácia Inteligente">
+          </div>
+          <div class="project-body">
+            <h4 class="project-title" data-i18n-key="project-farmacia-title">Farmácia Inteligente</h4>
+            <p class="project-desc text-muted" data-i18n-key="project-farmacia-desc">E-commerce farmacêutico com assistente de IA para recomendações e atendimento personalizado.</p>
+            <div class="project-actions">
+              <button class="btn-pixel" data-project="farmacia" data-i18n-key="btn-details-ia">Ver detalhes (IA)</button>
+              <a class="btn-pixel secondary" href="https://www.youtube.com/watch?v=lEbBU8k7w9Q" target="_blank" rel="noopener" data-i18n-key="btn-visit">Visitar</a>
+            </div>
+          </div>
+        </article> 
       </div>
     </section>
 
     <section id="sobre">
-      <h3 class="section-title">Sobre</h3>
-      <p class="text-muted">
+      <h3 class="section-title" data-i18n-key="about-title">Sobre</h3>
+      <p class="text-muted" data-i18n-key="about-desc">
         Sou Samuel, um jovem desenvolvedor apaixonado por tecnologia, design digital e experiências web inovadoras. Atualmente, estou cursando Desenvolvimento de Software e Multiplataformas (DSM) na Fatec, onde aprofundo meus conhecimentos em Front-end, Back-end e banco de dados, explorando novas ferramentas e técnicas para criar projetos cada vez mais completos.
       </p>
     </section>
 
     <section id="contato">
-      <h3 class="section-title">Contato</h3>
-      <p class="text-muted">
+      <h3 class="section-title" data-i18n-key="contact-title">Contato</h3>
+      <p class="text-muted" data-i18n-key="contact-desc">
         Aberto a colaborações e novos projetos. Envie um e-mail para
         <a href="mailto:samu.santos.lopes.2007@gmail.com">samu.santos.lopes.2007@gmail.com</a> ou me chame no LinkedIn.
       </p>
       <div class="hero-actions">
-        <a class="btn-pixel" href="mailto:samu.santos.lopes.2007@gmail.com">Enviar e-mail</a>
+        <a class="btn-pixel" href="mailto:samu.santos.lopes.2007@gmail.com" data-i18n-key="contact-btn-email">Enviar e-mail</a>
         <a class="btn-pixel secondary" href="https://www.linkedin.com/in/samuel-lopes-6b2492287/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
     <footer>
       <span>© 2025 • Rubiweb</span>
-      <span>Feito na medida do possivel.</span>
+      <span data-i18n-key="footer-made">Feito na medida do possivel.</span>
     </footer>
   </div>
 
   <div class="project-modal" id="project-modal" aria-hidden="true">
     <div class="project-modal-backdrop"></div>
     <div class="project-modal-content" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
-      <button class="btn-pixel ghost project-modal-close" aria-label="Fechar">Fechar</button>
+      <button class="btn-pixel ghost project-modal-close" aria-label="Fechar"></button>
+      
       <h4 id="project-modal-title" class="project-modal-title">Título do projeto</h4>
-      <p class="project-modal-desc text-muted">Descrição detalhada do projeto selecionado.</p>
+      <p id="project-modal-desc" class="project-modal-desc text-muted">Descrição detalhada...</p>
+
+      <h5 id="project-modal-tech-title" class="project-modal-subtitle">Tecnologias Usadas</h5>
+      <div class="project-modal-tech" id="project-modal-techlist">
+        </div>
+
       <div class="hero-actions">
         <a class="btn-pixel" id="project-modal-primary" href="#" target="_blank" rel="noopener">Ver online</a>
         <a class="btn-pixel secondary" id="project-modal-secondary" href="#" target="_blank" rel="noopener">Case/Repo</a>

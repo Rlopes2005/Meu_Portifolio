@@ -133,7 +133,7 @@ a:hover { color: var(--accent); }
 :root[data-theme="dark"] .code-typing {
   background: rgba(255,255,255,0.02);
   border-color: rgba(255,255,255,0.04);
-  color: var(--muted);
+  color: varmuted);
 }
 .code-line {
   white-space: pre-wrap;
@@ -212,31 +212,72 @@ a:hover { color: var(--accent); }
 :root[data-theme="dark"] .project-card { border-color: rgba(255,255,255,0.06); }
 .project-card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
 
-.project-thumb {
-  height: 140px;
-  background:
-    radial-gradient(circle at 20% 20%, var(--pastel-4), transparent 50%),
-    radial-gradient(circle at 80% 30%, var(--pastel-3), transparent 50%),
-    linear-gradient(135deg, var(--pastel-1), var(--pastel-2));
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-:root[data-theme="dark"] .project-thumb { border-bottom-color: rgba(255,255,255,0.06); }
-
 .project-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; }
 .project-title { margin: 0; font-weight: 600; }
 .project-desc { margin: 0; }
 
-/* Modal */
-.project-modal { position: fixed; inset: 0; display: none; }
-.project-modal.active { display: block; }
-.project-modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.35); backdrop-filter: blur(2px); }
-.project-modal-content {
-  position: absolute; left: 50%; top: 50%; width: min(680px, 92vw);
-  transform: translate(-50%, -50%); background: var(--card); color: var(--ink);
-  border: 1px solid rgba(0,0,0,0.08); padding: 24px; box-shadow: 8px 8px 0 0 rgba(0,0,0,0.12);
+
+/* --- MUDANÇA AQUI: Bloco do Modal inteiramente substituído --- */
+.project-modal {
+  position: fixed; 
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  
+  /* Controle de visibilidade */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-:root[data-theme="dark"] .project-modal-content { border-color: rgba(255,255,255,0.06); }
-.project-modal-close { position: absolute; right: 16px; top: 16px; }
+
+.project-modal.active {
+  opacity: 1; 
+  visibility: visible;
+  pointer-events: all;
+}
+
+.project-modal-backdrop {
+  position: absolute; 
+  inset: 0; 
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+.project-modal-content {
+  position: relative;
+  z-index: 1;
+  width: min(680px, 92vw);
+  background: var(--card); 
+  color: var(--ink);
+  border: 1px solid rgba(0,0,0,0.08); 
+  padding: 24px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.project-modal.active .project-modal-content {
+    transform: translateY(0);
+}
+
+:root[data-theme="dark"] .project-modal-content {
+  border-color: rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.project-modal-close {
+  position: absolute; 
+  right: 16px; 
+  top: 16px; 
+  z-index: 2;
+}
+/* --- Fim da mudança do Modal --- */
+
 
 /* Footer */
 footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.08); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -253,4 +294,142 @@ body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; 
 @media (max-width: 600px) {
   .projects-filters { justify-content: center; }
   .hero-image { max-width: 300px; }
+}
+
+/* Imagem do Projeto */
+.project-thumb {
+  height: 140px;
+  background:
+    radial-gradient(circle at 20% 20%, var(--pastel-4), transparent 50%),
+    radial-gradient(circle at 80% 30%, var(--pastel-3), transparent 50%),
+    linear-gradient(135deg, var(--pastel-1), var(--pastel-2));
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+:root[data-theme="dark"] .project-thumb { border-bottom-color: rgba(255,255,255,0.06); }
+
+/* Estilos para as tecnologias no modal */
+.project-modal-subtitle {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 24px;
+}
+
+.project-modal-tech span {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  background: var(--pastel-bg);
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+}
+
+:root[data-theme="dark"] .project-modal-tech span {
+  border-color: rgba(255,255,255,0.1);
+  background: #1F1F23;
+}
+
+/* --- ADICIONE ISSO NO FINAL DO SEU CSS --- */
+
+/* Controles do Cabeçalho (Tradução + Tema) */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switcher {
+  display: flex;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  background: var(--card);
+}
+:root[data-theme="dark"] .lang-switcher {
+  border-color: rgba(255,255,255,0.1);
+}
+
+.lang-btn {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: var(--card);
+}
+:root[data-theme="dark"] .lang-btn.active {
+  color: var(--ink);
+}
+
+.lang-btn:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.lang-btn:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* Dropdown do Currículo */
+.cv-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cv-dropdown-menu {
+  display: none; /* Começa escondido */
+  position: absolute;
+  bottom: 110%; /* Aparece ACIMA do botão */
+  left: 0;
+  min-width: 180px;
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 10;
+  overflow: hidden; /* Para o border-radius funcionar nos links */
+}
+
+.cv-dropdown-menu.active {
+  display: block; /* Mostra o menu */
+}
+
+.cv-dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  font-family: "Space Mono", monospace;
+  font-size: 14px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.cv-dropdown-menu a:hover {
+  background: var(--pastel-bg);
+  color: var(--accent);
 }
