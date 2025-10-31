@@ -133,7 +133,7 @@ a:hover { color: var(--accent); }
 :root[data-theme="dark"] .code-typing {
   background: rgba(255,255,255,0.02);
   border-color: rgba(255,255,255,0.04);
-  color: varmuted);
+  color: var(--muted); /* <-- CORREÇÃO AQUI */
 }
 .code-line {
   white-space: pre-wrap;
@@ -417,8 +417,7 @@ body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; 
 }
 
 
-/* --- MUDANÇA AQUI: Regras de Responsividade --- */
-/* Substituí as regras antigas por estas mais completas */
+/* --- Regras de Responsividade --- */
 
 @media (max-width: 900px) {
   .hero-inner { 
@@ -483,3 +482,4 @@ body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; 
     text-align: center;
   }
 }
+/* Fim do styles.css */
