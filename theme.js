@@ -116,7 +116,7 @@
         'contact-title': 'Contato',
         'contact-desc': 'Aberto a colaborações e novos projetos. Envie um e-mail para <a href="mailto:samu.santos.lopes.2007@gmail.com">samu.santos.lopes.2007@gmail.com</a> ou me chame no LinkedIn.',
         'contact-btn-email': 'Enviar e-mail',
-        'footer-made': 'Feito na medida do possivel.',
+        'footer-made': 'Desenvolvido com ☕', // <-- MUDANÇA AQUI
         'modal-tech-title': 'Tecnologias Usadas',
         'modal-close-label': 'Fechar',
       },
@@ -151,7 +151,7 @@
         'contact-title': 'Contact',
         'contact-desc': 'Open to collaborations and new projects. Send an email to <a href="mailto:samu.santos.lopes.2007@gmail.com">samu.santos.lopes.2007@gmail.com</a> or reach out on LinkedIn.',
         'contact-btn-email': 'Send email',
-        'footer-made': 'Made as far as possible.',
+        'footer-made': 'Developed with ☕', // <-- MUDANÇA AQUI
         'modal-tech-title': 'Technologies Used',
         'modal-close-label': 'Close',
       }

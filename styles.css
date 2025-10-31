@@ -199,8 +199,6 @@ a:hover { color: var(--accent); }
 /* Projects filters and grid */
 .projects-filters { display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-@media (max-width: 900px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
 
 .project-card {
   background: var(--card);
@@ -216,8 +214,6 @@ a:hover { color: var(--accent); }
 .project-title { margin: 0; font-weight: 600; }
 .project-desc { margin: 0; }
 
-
-/* --- MUDANÇA AQUI: Bloco do Modal inteiramente substituído --- */
 .project-modal {
   position: fixed; 
   inset: 0;
@@ -276,8 +272,6 @@ a:hover { color: var(--accent); }
   top: 16px; 
   z-index: 2;
 }
-/* --- Fim da mudança do Modal --- */
-
 
 /* Footer */
 footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.08); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -285,16 +279,6 @@ footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px s
 
 /* Transições */
 body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; }
-
-/* Responsivo */
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; padding: 32px; }
-  nav { display: none; }
-}
-@media (max-width: 600px) {
-  .projects-filters { justify-content: center; }
-  .hero-image { max-width: 300px; }
-}
 
 /* Imagem do Projeto */
 .project-thumb {
@@ -347,8 +331,6 @@ body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; 
   border-color: rgba(255,255,255,0.1);
   background: #1F1F23;
 }
-
-/* --- ADICIONE ISSO NO FINAL DO SEU CSS --- */
 
 /* Controles do Cabeçalho (Tradução + Tema) */
 .header-controls {
@@ -432,4 +414,72 @@ body, .card, .hero, footer { transition: background 0.3s ease, color 0.3s ease; 
 .cv-dropdown-menu a:hover {
   background: var(--pastel-bg);
   color: var(--accent);
+}
+
+
+/* --- MUDANÇA AQUI: Regras de Responsividade --- */
+/* Substituí as regras antigas por estas mais completas */
+
+@media (max-width: 900px) {
+  .hero-inner { 
+    grid-template-columns: 1fr; /* Hero vira coluna única */
+    padding: 32px; 
+  }
+  .projects-grid { 
+    grid-template-columns: 1fr 1fr; /* Grade de projetos vira 2 colunas */
+  }
+}
+
+@media (max-width: 700px) { 
+  /* Cabeçalho vira um 'bloco' centrado */
+  header {
+    flex-direction: column; /* Empilha o logo, nav e controles */
+    gap: 20px;
+  }
+
+  /* Nav vira um 'bloco' também */
+  nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os botões do nav quebrem a linha */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hero-actions {
+    flex-direction: column; /* Empilha os botões do Hero */
+    align-items: stretch; /* Faz os botões esticarem */
+  }
+
+  .hero-actions .btn-pixel,
+  .hero-actions .cv-dropdown-container {
+    width: 100%; /* Ocupa 100% da largura */
+  }
+
+  .hero-actions .btn-pixel {
+    justify-content: center; /* Centraliza o texto/ícone do botão */
+  }
+
+  .cv-dropdown-menu {
+    /* No mobile, é melhor o menu abrir para baixo */
+    bottom: auto;
+    top: 110%;
+    width: 100%; /* Ocupa a largura total do botão pai */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid { 
+    grid-template-columns: 1fr; /* Grade de projetos vira 1 coluna */
+  }
+  .projects-filters { 
+    justify-content: center; 
+  }
+  .hero-image { 
+    max-width: 300px; 
+  }
+  footer {
+    flex-direction: column; /* Empilha o texto do rodapé */
+    align-items: center;
+    text-align: center;
+  }
 }

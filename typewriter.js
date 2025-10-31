@@ -4,12 +4,13 @@
   const cursor = document.getElementById("code-cursor");
   if (!el || !cursor) return;
 
+  // MUDANÇA AQUI: Textos atualizados para refletir seu perfil
   const sequences = [
-    'const user = { name: "Seu Nome", role: "Designer / Front-end" };',
-    'function build() {',
-    '  return <Portfolio theme="blue / black-red" components="minimal, pixel" />;',
+    'const user = { name: "Samuel", role: "Full-Stack Developer" };',
+    'const tech = ["PHP", "Python", "MySQL", "AWS", "JavaScript"];',
+    'function getFocus() {',
+    '  return "Building robust web solutions.";',
     '}',
-    'await deploy(user, build());',
     '// Bem-vindo ao meu portfólio'
   ];
 
