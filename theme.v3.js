@@ -88,7 +88,9 @@
       'pt': {
         'title': 'Samuel — Portfólio',
         'nav-projects': 'Projetos',
+        'nav-courses': 'Cursos',
         'nav-about': 'Sobre',
+        'nav-skills': 'Habilidades',
         'nav-contact': 'Contato',
         'hero-title': 'Samuel. Programador Full-Stack.',
         'hero-sub': 'Apaixonado por criar soluções digitais simples e eficientes que conectam pessoas e ideias, sempre buscando mais conecimento e inovação.',
@@ -119,11 +121,37 @@
         'footer-made': 'Desenvolvido com ☕', 
         'modal-tech-title': 'Tecnologias Usadas',
         'modal-close-label': 'Fechar',
+        
+        // --- CHAVES DA SEÇÃO DE CURSOS ---
+        'courses-title': 'Cursos e Certificações',
+        'btn-certificate': 'Ver Certificado',
+        'course-1-title': 'Desenvolvimento Web Completo',
+        'course-1-inst': 'Udemy',
+        'course-1-desc': '+100 horas de conteúdo prático cobrindo HTML5, CSS3, JavaScript, PHP 7, MySQL e mais.',
+        'course-2-title': 'Python para Automação',
+        'course-2-inst': 'Alura',
+        'course-2-desc': 'Curso focado em scripting com Python para automação de tarefas, web scraping e manipulação de arquivos.',
+        'course-3-title': 'AWS Cloud Practitioner',
+        'course-3-inst': 'AWS',
+        'course-3-desc': 'Certificação oficial cobrindo os conceitos fundamentais de nuvem e serviços da AWS (EC2, S3, etc).',
+        
+        // --- CHAVES DA SEÇÃO DE HABILIDADES ---
+        'skills-title': 'Minhas Habilidades',
+        'skill-php': 'PHP',
+        'skill-python': 'Python',
+        'skill-js': 'JavaScript',
+        'skill-mysql': 'MySQL',
+        'skill-aws': 'AWS',
+        'skill-html': 'HTML5',
+        'skill-css': 'CSS3',
+        'skill-figma': 'Figma',
       },
       'en': {
         'title': 'Samuel — Portfolio',
         'nav-projects': 'Projects',
+        'nav-courses': 'Courses',
         'nav-about': 'About',
+        'nav-skills': 'Skills',
         'nav-contact': 'Contact',
         'hero-title': 'Samuel. Full-Stack Developer.',
         'hero-sub': 'Developer with hands-on experience in e-commerce projects (PHP and HTML/CSS) and Linux server administration on AWS (EC2, SSH).',
@@ -154,6 +182,30 @@
         'footer-made': 'Developed with ☕', 
         'modal-tech-title': 'Technologies Used',
         'modal-close-label': 'Close',
+        
+        // --- KEYS FOR COURSES SECTION ---
+        'courses-title': 'Courses & Certifications',
+        'btn-certificate': 'View Certificate',
+        'course-1-title': 'Complete Web Development',
+        'course-1-inst': 'Udemy',
+        'course-1-desc': '+100 hours of practical content covering HTML5, CSS3, JavaScript, PHP 7, MySQL, and more.',
+        'course-2-title': 'Python for Automation',
+        'course-2-inst': 'Alura',
+        'course-2-desc': 'Course focused on Python scripting for task automation, web scraping, and file manipulation.',
+        'course-3-title': 'AWS Cloud Practitioner',
+        'course-3-inst': 'AWS',
+        'course-3-desc': 'Official certification covering the fundamental concepts of cloud and AWS services (EC2, S3, etc).',
+        
+        // --- KEYS FOR SKILLS SECTION ---
+        'skills-title': 'My Skills',
+        'skill-php': 'PHP',
+        'skill-python': 'Python',
+        'skill-js': 'JavaScript',
+        'skill-mysql': 'MySQL',
+        'skill-aws': 'AWS',
+        'skill-html': 'HTML5',
+        'skill-css': 'CSS3',
+        'skill-figma': 'Figma',
       }
     };
     

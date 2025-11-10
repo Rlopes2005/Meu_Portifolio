@@ -366,6 +366,149 @@ a:hover { color: var(--accent); }
   color: var(--accent);
 }
 
+/* --- Seção de Cursos --- */
+.course-card {
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+:root[data-theme="dark"] .course-card {
+  border-color: rgba(255,255,255,0.06);
+}
+
+.course-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.course-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.course-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.course-institution {
+  font-family: "Space Mono", monospace;
+  font-size: 13px;
+  background: var(--pastel-bg);
+  padding: 4px 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+:root[data-theme="dark"] .course-institution {
+  border-color: rgba(255,255,255,0.1);
+  background: #1F1F23;
+}
+
+.course-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.course-actions {
+  margin-top: auto; /* Empurra o botão para o final do card */
+  padding-top: 10px;
+}
+
+/* --- Seção de Habilidades --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.skill-card {
+  background: var(--card);
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  color: var(--accent);
+}
+
+:root[data-theme="dark"] .skill-card {
+  border-color: rgba(255,255,255,0.06);
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--pastel-bg);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 50%; /* Deixa o ícone redondo */
+  flex-shrink: 0; 
+}
+
+/* Estilos para a imagem SVG dentro do ícone */
+.skill-icon img {
+  width: 36px; /* Ajuste o tamanho do ícone aqui */
+  height: 36px; /* Ajuste o tamanho do ícone aqui */
+  object-fit: contain; /* Garante que o SVG se ajuste sem cortar */
+  filter: grayscale(100%) brightness(0) opacity(0.8); /* Ícones monocromáticos (escuros) por padrão */
+  transition: filter 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o card */
+.skill-card:hover .skill-icon img {
+  filter: none; /* Remove o filtro, mostrando as cores originais do SVG */
+}
+
+:root[data-theme="dark"] .skill-icon {
+  border-color: rgba(255,255,255,0.1);
+  background: #1F1F23;
+}
+
+/* No tema escuro, os ícones também devem ser claros. */
+:root[data-theme="dark"] .skill-icon img {
+  filter: grayscale(100%) brightness(100%) opacity(0.8); /* Torna ícones brancos */
+}
+
+/* Ao passar o mouse no tema escuro, mostra as cores originais */
+:root[data-theme="dark"] .skill-card:hover .skill-icon img {
+  filter: none; 
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+
+/* Espaçamento das seções */
+#projetos, #cursos, #sobre, #habilidades, #contato {
+    margin-top: 48px;
+}
+
 /* Footer */
 footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px solid rgba(0,0,0,0.08); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 :root[data-theme="dark"] footer { border-top-color: rgba(255,255,255,0.08); } 
@@ -387,19 +530,15 @@ footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px s
   nav { justify-content: center; gap: 8px; }
   .brand { font-size: 1.5rem; }
   
-  /* --- MUDANÇA AQUI --- */
   .header-controls { 
     width: 100%;
     flex-direction: column; 
     gap: 12px; 
-    align-items: center; /* Troquei 'stretch' por 'center' */
+    align-items: center; 
   }
   .lang-switcher { 
-    /* width: 100%; - REMOVI ESTA LINHA */
     justify-content: center; 
   }
-  /* REMOVI A REGRA .header-controls .btn-pixel { width: 100%; } */
-  /* --- FIM DA MUDANÇA --- */
   
   .hero-title { font-size: 2rem; }
   .hero-actions { flex-direction: column; align-items: stretch; gap: 10px; }
@@ -411,6 +550,9 @@ footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px s
   }
 
   .projects-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px; }
+  .skill-card { padding: 16px 12px; gap: 12px; }
+
   footer { flex-direction: column; align-items: center; text-align: center; }
 }
 
@@ -421,4 +563,5 @@ footer { margin-top: 48px; padding: 24px; color: var(--muted); border-top: 1px s
   .btn-pixel { padding: 10px 14px; font-size: 13px; }
   .hero-image { max-width: 260px; border-width: 4px; }
   .projects-grid { gap: 12px; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); } /* Força 2 colunas */
 }
