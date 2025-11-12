@@ -122,18 +122,30 @@
         'modal-tech-title': 'Tecnologias Usadas',
         'modal-close-label': 'Fechar',
         
-        // --- CHAVES DA SEÇÃO DE CURSOS ---
+        // --- CHAVES DA SEÇÃO DE CURSOS (ATUALIZADAS) ---
         'courses-title': 'Cursos e Certificações',
         'btn-certificate': 'Ver Certificado',
-        'course-1-title': 'Desenvolvimento Web Completo',
-        'course-1-inst': 'Udemy',
-        'course-1-desc': '+100 horas de conteúdo prático cobrindo HTML5, CSS3, JavaScript, PHP 7, MySQL e mais.',
-        'course-2-title': 'Python para Automação',
-        'course-2-inst': 'Alura',
-        'course-2-desc': 'Curso focado em scripting com Python para automação de tarefas, web scraping e manipulação de arquivos.',
-        'course-3-title': 'AWS Cloud Practitioner',
-        'course-3-inst': 'AWS',
-        'course-3-desc': 'Certificação oficial cobrindo os conceitos fundamentais de nuvem e serviços da AWS (EC2, S3, etc).',
+        'btn-enrolled': 'Ver Matrícula',
+        
+        'course-ebac-fs-title': 'Profissão: Desenvolvedor Full Stack Python',
+        'course-ebac-fs-inst': 'EBAC',
+        'course-ebac-fs-desc': 'Curso profissionalizante focado em Python, Django, e infraestrutura. (Cursando)',
+        
+        'course-ebac-ia-title': 'Inteligência Artificial',
+        'course-ebac-ia-inst': 'EBAC',
+        'course-ebac-ia-desc': 'Curso de participação cobrindo os conceitos e aplicações de Inteligência Artificial.',
+        
+        'course-bradesco-excel-title': 'Microsoft Excel 2016 (Trilha)',
+        'course-bradesco-excel-inst': 'Fund. Bradesco',
+        'course-bradesco-excel-desc': 'Trilha de conhecimento completa (Básico, Intermediário e Avançado) da ferramenta.',
+        
+        'course-inova-title': 'Escola de ',
+        'course-inova-inst': 'INOVA CPS',
+        'course-inova-desc': 'Programa de 40 horas sobre Engajar, Idear, Prototipar, Testar e Crescer.',
+        
+        'course-bradesco-py-title': 'Desenvolvimento Orientado a Objetos com Python',
+        'course-bradesco-py-inst': 'Fund. Bradesco',
+        'course-bradesco-py-desc': 'Curso autoinstrucional focado nos conceitos de POO aplicados à linguagem Python.',
         
         // --- CHAVES DA SEÇÃO DE HABILIDADES ---
         'skills-title': 'Minhas Habilidades',
@@ -145,6 +157,12 @@
         'skill-html': 'HTML5',
         'skill-css': 'CSS3',
         'skill-figma': 'Figma',
+        'skill-react': 'React',
+        'skill-flask': 'Flask',
+        'skill-csharp': 'C#',
+        'skill-bootstrap': 'Bootstrap',
+        'skill-git': 'Git',
+        'skill-docker': 'Docker',
       },
       'en': {
         'title': 'Samuel — Portfolio',
@@ -183,18 +201,30 @@
         'modal-tech-title': 'Technologies Used',
         'modal-close-label': 'Close',
         
-        // --- KEYS FOR COURSES SECTION ---
+        // --- KEYS FOR COURSES SECTION (UPDATED) ---
         'courses-title': 'Courses & Certifications',
         'btn-certificate': 'View Certificate',
-        'course-1-title': 'Complete Web Development',
-        'course-1-inst': 'Udemy',
-        'course-1-desc': '+100 hours of practical content covering HTML5, CSS3, JavaScript, PHP 7, MySQL, and more.',
-        'course-2-title': 'Python for Automation',
-        'course-2-inst': 'Alura',
-        'course-2-desc': 'Course focused on Python scripting for task automation, web scraping, and file manipulation.',
-        'course-3-title': 'AWS Cloud Practitioner',
-        'course-3-inst': 'AWS',
-        'course-3-desc': 'Official certification covering the fundamental concepts of cloud and AWS services (EC2, S3, etc).',
+        'btn-enrolled': 'View Enrollment',
+
+        'course-ebac-fs-title': 'Profession: Full Stack Python Developer',
+        'course-ebac-fs-inst': 'EBAC',
+        'course-ebac-fs-desc': 'Professional course focused on Python, Django, and infrastructure. (Enrolled)',
+
+        'course-ebac-ia-title': 'Artificial Intelligence',
+        'course-ebac-ia-inst': 'EBAC ',
+        'course-ebac-ia-desc': 'Participation course covering the concepts and applications of Artificial Intelligence.',
+
+        'course-bradesco-excel-title': 'Microsoft Excel 2016 (Track)',
+        'course-bradesco-excel-inst': 'Fund. Bradesco ',
+        'course-bradesco-excel-desc': 'Complete knowledge track (Basic, Intermediate, and Advanced) of the tool.',
+
+        'course-inova-title': 'School of Innovators',
+        'course-inova-inst': 'INOVA CPS',
+        'course-inova-desc': '40-hour program on Engaging, Ideating, Prototyping, Testing, and Growing.',
+
+        'course-bradesco-py-title': 'Object-Oriented Development with Python',
+        'course-bradesco-py-inst': 'Fund. Bradesco',
+        'course-bradesco-py-desc': 'Self-taught course focused on OOP concepts applied to the Python language.',
         
         // --- KEYS FOR SKILLS SECTION ---
         'skills-title': 'My Skills',
@@ -206,6 +236,12 @@
         'skill-html': 'HTML5',
         'skill-css': 'CSS3',
         'skill-figma': 'Figma',
+        'skill-react': 'React',
+        'skill-flask': 'Flask',
+        'skill-csharp': 'C#',
+        'skill-bootstrap': 'Bootstrap',
+        'skill-git': 'Git',
+        'skill-docker': 'Docker',
       }
     };
     
