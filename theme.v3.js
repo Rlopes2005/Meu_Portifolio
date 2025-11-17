@@ -104,12 +104,17 @@
         'filter-web': 'Web',
         'filter-delivery': 'Delivery',
         'filter-ecommerce': 'E-commerce',
+        
+        // --- PROJETOS (COM CENSO) ---
+        'project-censo-title': 'Dashboard Censo SJC',
+        'project-censo-desc': 'Plataforma web (API da faculdade) que transforma dados do censo de SJC em gráficos e visualizações interativas.',
         'project-fretefast-title': 'FreteFast',
         'project-fretefast-desc': 'Site desenvolvido para uma feira com foco em delivery rápido e eficiente.',
         'project-pizzaria-title': 'Delivery Pizzaria',
         'project-pizzaria-desc': 'Plataforma de pedidos online para uma pizzaria, com foco na experiência do usuário e design responsivo.',
         'project-farmacia-title': 'Farmácia Inteligente',
         'project-farmacia-desc': 'E-commerce farmacêutico com assistente de IA para recomendações e atendimento personalizado.',
+        
         'btn-details': 'Ver detalhes',
         'btn-details-ia': 'Ver detalhes (IA)',
         'btn-visit': 'Visitar',
@@ -122,7 +127,7 @@
         'modal-tech-title': 'Tecnologias Usadas',
         'modal-close-label': 'Fechar',
         
-        // --- CHAVES DA SEÇÃO DE CURSOS (ATUALIZADAS) ---
+        // --- CHAVES DA SEÇÃO DE CURSOS (COM SUAS EDIÇÕES) ---
         'courses-title': 'Cursos e Certificações',
         'btn-certificate': 'Ver Certificado',
         'btn-enrolled': 'Ver Matrícula',
@@ -132,19 +137,19 @@
         'course-ebac-fs-desc': 'Curso profissionalizante focado em Python, Django, e infraestrutura. (Cursando)',
         
         'course-ebac-ia-title': 'Inteligência Artificial',
-        'course-ebac-ia-inst': 'EBAC',
+        'course-ebac-ia-inst': 'EBAC', // [cite: 2]
         'course-ebac-ia-desc': 'Curso de participação cobrindo os conceitos e aplicações de Inteligência Artificial.',
         
         'course-bradesco-excel-title': 'Microsoft Excel 2016 (Trilha)',
-        'course-bradesco-excel-inst': 'Fund. Bradesco',
+        'course-bradesco-excel-inst': 'Fund. Bradesco', // [cite: 3]
         'course-bradesco-excel-desc': 'Trilha de conhecimento completa (Básico, Intermediário e Avançado) da ferramenta.',
         
-        'course-inova-title': 'Escola de ',
-        'course-inova-inst': 'INOVA CPS',
+        'course-inova-title': 'Escola de Inovadores', // [cite: 4]
+        'course-inova-inst': 'INOVA CPS', // [cite: 4]
         'course-inova-desc': 'Programa de 40 horas sobre Engajar, Idear, Prototipar, Testar e Crescer.',
         
         'course-bradesco-py-title': 'Desenvolvimento Orientado a Objetos com Python',
-        'course-bradesco-py-inst': 'Fund. Bradesco',
+        'course-bradesco-py-inst': 'Fund. Bradesco', // [cite: 5]
         'course-bradesco-py-desc': 'Curso autoinstrucional focado nos conceitos de POO aplicados à linguagem Python.',
         
         // --- CHAVES DA SEÇÃO DE HABILIDADES ---
@@ -183,12 +188,17 @@
         'filter-web': 'Web',
         'filter-delivery': 'Delivery',
         'filter-ecommerce': 'E-commerce',
+
+        // --- PROJETOS (COM CENSO) ---
+        'project-censo-title': 'SJC Census Dashboard',
+        'project-censo-desc': 'Web platform (college API project) that transforms SJC census data into interactive charts and visualizations.',
         'project-fretefast-title': 'Market Delivery Site',
         'project-fretefast-desc': 'Created the UI for an e-commerce site focused on market item delivery, featuring product listings, prices, and quantity selection.',
         'project-pizzaria-title': 'Pizzeria System',
         'project-pizzaria-desc': 'Developed an online ordering system for a pizzeria, featuring a functional shopping cart in PHP integrated with a MySQL database.',
         'project-farmacia-title': 'Smart Pharmacy',
         'project-farmacia-desc': 'Pharmaceutical e-commerce with an AI assistant for recommendations and personalized service.',
+
         'btn-details': 'View details',
         'btn-details-ia': 'View details (AI)',
         'btn-visit': 'Visit',
@@ -201,7 +211,7 @@
         'modal-tech-title': 'Technologies Used',
         'modal-close-label': 'Close',
         
-        // --- KEYS FOR COURSES SECTION (UPDATED) ---
+        // --- KEYS FOR COURSES SECTION (COM SUAS EDIÇÕES) ---
         'courses-title': 'Courses & Certifications',
         'btn-certificate': 'View Certificate',
         'btn-enrolled': 'View Enrollment',
@@ -211,19 +221,19 @@
         'course-ebac-fs-desc': 'Professional course focused on Python, Django, and infrastructure. (Enrolled)',
 
         'course-ebac-ia-title': 'Artificial Intelligence',
-        'course-ebac-ia-inst': 'EBAC ',
+        'course-ebac-ia-inst': 'EBAC ', // [cite: 2]
         'course-ebac-ia-desc': 'Participation course covering the concepts and applications of Artificial Intelligence.',
 
         'course-bradesco-excel-title': 'Microsoft Excel 2016 (Track)',
-        'course-bradesco-excel-inst': 'Fund. Bradesco ',
+        'course-bradesco-excel-inst': 'Fund. Bradesco ', // [cite: 3]
         'course-bradesco-excel-desc': 'Complete knowledge track (Basic, Intermediate, and Advanced) of the tool.',
 
-        'course-inova-title': 'School of Innovators',
-        'course-inova-inst': 'INOVA CPS',
+        'course-inova-title': 'School of Innovators', // [cite: 4]
+        'course-inova-inst': 'INOVA CPS', // [cite: 4]
         'course-inova-desc': '40-hour program on Engaging, Ideating, Prototyping, Testing, and Growing.',
 
         'course-bradesco-py-title': 'Object-Oriented Development with Python',
-        'course-bradesco-py-inst': 'Fund. Bradesco',
+        'course-bradesco-py-inst': 'Fund. Bradesco', // [cite: 5]
         'course-bradesco-py-desc': 'Self-taught course focused on OOP concepts applied to the Python language.',
         
         // --- KEYS FOR SKILLS SECTION ---
@@ -245,8 +255,17 @@
       }
     };
     
-    // Detalhes do Modal (agora com traduções)
+    // --- Detalhes do Modal (COM CENSO) ---
     const details = {
+      "censo": {
+        title: { 'pt': 'Dashboard Censo SJC', 'en': 'SJC Census Dashboard' },
+        desc: { 'pt': 'Plataforma web (API da faculdade) que transforma dados do censo de SJC em gráficos e visualizações interativas. Minha responsabilidade foi o front-end da parte Web.', 'en': 'Web platform (college API project) that transforms SJC census data into interactive charts and visualizations. My responsibility was the web front-end.' },
+        primary: "#", // Link para o projeto
+        secondary: "#", // Link para o GitHub (se houver)
+        tech: ["HTML", "CSS", "JavaScript", "API"],
+        primaryLang: { 'pt': 'Ver online', 'en': 'Visit Site' },
+        secondaryLang: { 'pt': 'Ver GitHub', 'en': 'View GitHub' }
+      },
       "fretefast": {
         title: { 'pt': 'FreteFast', 'en': 'Market Delivery Site' },
         desc: { 'pt': 'Site desenvolvido para uma feira com foco em delivery rápido e eficiente.', 'en': 'Created the UI for an e-commerce site focused on market item delivery, featuring product listings, prices, and quantity selection.' },
